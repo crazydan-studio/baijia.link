@@ -17,15 +17,14 @@ function hideNavbar() {
   document.head.appendChild(__navbar_style__);
   document.__navbar_style__ = __navbar_style__;
 }
+// hidden navbar
+if (typeof window !== 'undefined') {
+  hideNavbar();
+}
 
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
-
-  // hidden navbar
-  if (typeof window !== 'undefined') {
-    hideNavbar();
-  }
 
   return (
     <Layout
