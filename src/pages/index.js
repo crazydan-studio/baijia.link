@@ -6,21 +6,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-function hideNavbar() {
-  if (document.__navbar_style__) {
-    return;
-  }
-
-  let __navbar_style__ = document.createElement('style');
-  __navbar_style__.innerHTML = ".navbar{ display: none; }";
-
-  document.head.appendChild(__navbar_style__);
-  document.__navbar_style__ = __navbar_style__;
-}
-// hidden navbar
-if (typeof window !== 'undefined') {
-  hideNavbar();
-}
 
 function Home() {
   const context = useDocusaurusContext();
@@ -30,7 +15,7 @@ function Home() {
     <Layout
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
       description={`${siteConfig.title}: ${siteConfig.tagline}`}
-      noFooter
+      noFooter noNav
       wrapperClassName={styles.heroMain}>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">

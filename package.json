@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "docusaurus start",
-    "build": "docusaurus build --out-dir dist",
+    "start": "npm run _hack_ && docusaurus start",
+    "build": "npm run _hack_ && docusaurus build --out-dir dist",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy"
+    "deploy": "docusaurus deploy",
+    "_hack_": "cp -f build/hack/theme-classic.Layout.js node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.65",
