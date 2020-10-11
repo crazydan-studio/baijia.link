@@ -1,5 +1,5 @@
 module.exports = {
-  title: '百家辩',
+  title: '百家',
   tagline: '辩则明，不辩则昏',
   url: 'https://baijia.link',
   baseUrl: '/',
@@ -8,9 +8,9 @@ module.exports = {
   projectName: 'baijia.link',
   themeConfig: {
     navbar: {
-      title: '百家辩',
+      title: '百家',
       logo: {
-        alt: '百家辩',
+        alt: '百家',
         src: 'img/logo.jpg',
       },
       items: [
@@ -20,7 +20,7 @@ module.exports = {
       style: 'dark',
       links: [
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://crazydan.org/">crazydan.org</a>.<br>Built with <a href="https://v2.docusaurus.io/">Docusaurus 2</a>.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://crazydan.org/" target="_blank">Crazydan Studio</a>.`,
     },
   },
   plugins: [

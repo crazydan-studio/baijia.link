@@ -5,7 +5,12 @@
  * and scoped locally.
  */
 
+.heroMain {
+  display: flex;
+}
+
 .heroBanner {
+  flex: 1 0 auto;
   padding: 6rem 0;
   text-align: center;
   position: relative;
@@ -14,19 +19,28 @@
   background-color: #fff;
   background-attachment: fixed;
   background-position: top;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/img/nav.jpg);
+  background-image: url(/img/bian-1.jpg);
+}
+
+.heroTitle {
+  color: #a61919;
+  font-size: 6rem;
+}
+
+.heroSubTitle {
+  color: #0c0fa8;
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
-    background-position: 0 3em;
   }
 
-  .featureImage {
-    max-width: 355px;
+  .heroTitle {
+    font-size: 6rem;
   }
 }
 
@@ -36,13 +50,6 @@
   justify-content: center;
 }
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.featureImage {
-  height: 200px;
+.getStarted {
+  color: #9f3d3d !important;
 }
