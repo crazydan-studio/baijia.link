@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -6,14 +6,28 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+// hidden navbar
+function hideNavbar() {
+  let __nav__style_id__ = "navbar-hidden-style";
+  if (document.__nav__style__) {
+    return;
+  }
+
+  let __nav__style__ = document.createElement('style');
+  __nav__style__.id = __nav__style_id__;
+  __nav__style__.innerHTML = ".navbar{ display: none; }";
+  document.head.appendChild(__nav__style__);
+  document.__nav__style__ = __nav__style__;
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
-  // hidden navbar
-  let __nav__style__ = document.createElement('style');
-  __nav__style__.innerHTML=".navbar{ display: none; }";
-  document.head.appendChild(__nav__style__);
+  // react hooks
+  useEffect(() => {
+    hideNavbar();
+  });
 
   return (
     <Layout
