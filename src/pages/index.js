@@ -6,7 +6,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-// hidden navbar
 function hideNavbar() {
   if (document.__navbar_style__) {
     return;
@@ -23,10 +22,10 @@ function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
-  // react hooks
-  useEffect(() => {
+  // hidden navbar
+  if (typeof window !== 'undefined') {
     hideNavbar();
-  });
+  }
 
   return (
     <Layout
