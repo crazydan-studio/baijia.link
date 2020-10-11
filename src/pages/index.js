@@ -8,16 +8,15 @@ import styles from './styles.module.css';
 
 // hidden navbar
 function hideNavbar() {
-  let __nav__style_id__ = "navbar-hidden-style";
-  if (document.__nav__style__) {
+  if (document.__navbar_style__) {
     return;
   }
 
-  let __nav__style__ = document.createElement('style');
-  __nav__style__.id = __nav__style_id__;
-  __nav__style__.innerHTML = ".navbar{ display: none; }";
-  document.head.appendChild(__nav__style__);
-  document.__nav__style__ = __nav__style__;
+  let __navbar_style__ = document.createElement('style');
+  __navbar_style__.innerHTML = ".navbar{ display: none; }";
+
+  document.head.appendChild(__navbar_style__);
+  document.__navbar_style__ = __navbar_style__;
 }
 
 function Home() {
